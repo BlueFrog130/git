@@ -1,5 +1,8 @@
 # Git Tutorial
 
+- [Git Download](https://git-scm.com/downloads)
+- [Visual Studio Code](https://code.visualstudio.com/) - My preferred IDE for any programming language with git integrated
+
 ## Getting Started
 
 0. Ensure you are in a new, clean directory with a `README.md` file
