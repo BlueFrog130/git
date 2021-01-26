@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Git Tutorial</title>
+        <style>
+</style>
+        
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/markdown.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Microsoft/vscode/extensions/markdown-language-features/media/highlight.css">
+<style>
+            body {
+                font-family: -apple-system, BlinkMacSystemFont, 'Segoe WPC', 'Segoe UI', system-ui, 'Ubuntu', 'Droid Sans', sans-serif;
+                font-size: 14px;
+                line-height: 1.6;
+            }
+        </style>
+        <style>
+.task-list-item { list-style-type: none; } .task-list-item-checkbox { margin-left: -20px; vertical-align: middle; }
+</style>
+        
+        
+        
+    </head>
+    <body class="vscode-body vscode-light">
+        <h1 id="git-tutorial">Git Tutorial</h1>
+<h3 id="todo-list">Todo List</h3>
+<ul class="contains-task-list">
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Install git</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Create new GitHub repository</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Initialize git repository</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Set remote branch to GitHub repo</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Creating new files &amp; commit them</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Create new branch</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> Merge conflicts</li>
+<li class="task-list-item"><input class="task-list-item-checkbox" disabled="" type="checkbox"> .gitignore</li>
+</ul>
+<h2 id="git-commands">Git commands</h2>
+<hr>
+<h3 id="initializes-repository">Initializes repository</h3>
+<pre><code class="language-bash"><div>git init
+</div></code></pre>
+<br/>
+<h3 id="clones-repository-into-a-folder">Clones repository into a folder</h3>
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">clone</span> &lt;url&gt;
+</div></code></pre>
+<br/>
+<h3 id="pull-latest-commits-from-repository">Pull latest commits from repository</h3>
+<pre><code class="language-bash"><div>git pull <span class="hljs-comment"># -r</span>
+</div></code></pre>
+<h4 id="most-used-options">Most Used Options</h4>
+<ul>
+<li><code>-r</code> rebase all local commits on top commits pulled from repo</li>
+</ul>
+<br/>
+<h3 id="push-all-local-commits-to-the-remote-repository">Push all local commits to the remote repository</h3>
+<pre><code class="language-bash"><div>git push
+</div></code></pre>
+<h4 id="most-used-options-1">Most Used Options</h4>
+<ul>
+<li><code>--set-upstream origin &lt;branch&gt;</code>/<code>-u origin &lt;branch&gt;</code> Pushes branch to remote</li>
+</ul>
+<h3 id="stage-changes-to-be-committed">Stage changes to be committed</h3>
+<pre><code class="language-bash"><div>git add &lt;files&gt;
+</div></code></pre>
+<h4 id="most-used-options-2">Most Used Options</h4>
+<ul>
+<li><code>-a</code> will stage all files</li>
+</ul>
+<br/>
+<h3 id="commit-all-staged-changes">Commit all staged changes</h3>
+<p>This will open a text editor to briefly describe your changes.</p>
+<pre><code class="language-bash"><div>git commit
+</div></code></pre>
+<h4 id="most-used-options-3">Most Used Options</h4>
+<ul>
+<li><code>-m &quot;&lt;message&gt;&quot;</code> Passes message rather than opening a text editor</li>
+<li><code>--amend</code> Adds staged changes to the previous commit</li>
+</ul>
+<br/>
+<h3 id="list-all-branches">List all branches</h3>
+<pre><code class="language-bash"><div>git branch &lt;name&gt;
+</div></code></pre>
+<p>If you include a name, it will create a new branch with that name from your currently active branch.</p>
+<h4 id="most-used-options-4">Most Used Options</h4>
+<ul>
+<li><code>-a</code> Lists all local and remote branches</li>
+<li><code>-d &lt;branch&gt;</code> Deletes a branch</li>
+<li><code>-m &lt;branch&gt;</code> Renames a branch</li>
+</ul>
+<br/>
+<h3 id="switch-to-a-branch">Switch to a branch</h3>
+<p>Should commit all changes before checking out.</p>
+<pre><code class="language-bash"><div>git checkout &lt;branch&gt;
+</div></code></pre>
+<h4 id="most-used-options-5">Most Used Options</h4>
+<ul>
+<li><code>-b</code> Creates and switches to a new branch</li>
+</ul>
+<br/>
+<h3 id="resets-all-commit-to-head">Resets all commit to HEAD</h3>
+<pre><code class="language-bash"><div>git reset
+</div></code></pre>
+<h4 id="most-used-options-6">Most Used Options</h4>
+<ul>
+<li><code>HEAD~1</code> Undos last commit</li>
+<li><code>--hard</code> Deletes all local changes</li>
+</ul>
+<h3 id="log-commits">Log commits</h3>
+<pre><code class="language-bash"><div>git <span class="hljs-built_in">log</span>
+</div></code></pre>
+<h4 id="most-used-options-7">Most Used Options</h4>
+<ul>
+<li><code>--pretty=oneline</code> prints everything nicely in one line</li>
+</ul>
+<br/>
+<hr>
+<h2 id="useful-aliases">Useful Aliases</h2>
+<p>Aliases are essentially custom git commands that are defined in <code>C:\Users\%USER%\.gitconfig</code></p>
+<pre><code><code><div>[alias]
+    co = checkout
+    lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit
+    undo = reset HEAD~1 --mixed
+    amend = commit -a --amend
+</div></code></code></pre>
+
+    </body>
+    </html>
