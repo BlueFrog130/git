@@ -1,18 +1,56 @@
 # Git Tutorial
 
-### Todo List
+## Getting Started
 
-- [X] Install git
-- [X] Create new GitHub repository
-- [X] Initialize git repository
-- [X] Set remote branch to GitHub repo
-- [X] Creating new files & commit them
-- [X] Create new branch
-- [X] Merge conflicts
-- [X] .gitignore
+0. Ensure you are in a new, clean directory with a `README.md` file
 
-## Git commands
----
+1. Create repo
+    ```bash
+    git init
+    ```
+2. Set branch name to "master" or whatever branch name you want
+    ```bash
+    git branch -m master
+    ```
+3. Set origin to GitHub repository. Where `<url>` is the URL of your git repository.
+    ```bash
+    git remote add origin <url>
+    ```
+4. Add files to commit
+    ```bash
+    git add .
+    ```
+5. Commit the files
+    ```bash
+    git commit -m "init"
+    ```
+6. Intial push. Ensure you are pushing to the name you gave to remote and the branch name you set. In this example the remote name is "origin" and the branch name is "master"
+    ```bash
+    git push -u origin master
+    ```
+
+## Workflow
+
+The philosiphy of git is to seperate your code changes into small, readable commits. You may stack up as many commits locally as you like, and push them when you are ready.
+
+### Typical Workflow
+
+1. Make some changes to code/files
+2. Add them. You can do `git add <file>` individually instead.
+    ```bash
+    git add . 
+    ```
+3. Commit you changes and annotate what you changed
+    ```bash
+    git commit -m "<DESCRIBE YOUR CHANGES>"
+    ```
+4. Repeat steps 1 - 3 until you want to update remote repository
+5. Push commits. If you are pushing a branch that does not exist remotely, you will need to `git push -u origin <branch>`
+    ```bash
+    git push
+    ```
+
+## Common Git commands
 
 ### Initializes repository
 ```bash
