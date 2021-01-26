@@ -118,3 +118,6 @@ Aliases are essentially custom git commands that are defined in `C:\Users\%USER%
     undo = reset HEAD~1 --mixed
     amend = commit -a --amend
 ```
+
+
+add some other stuff
