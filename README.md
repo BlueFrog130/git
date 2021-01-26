@@ -6,10 +6,10 @@
 - [X] Create new GitHub repository
 - [X] Initialize git repository
 - [X] Set remote branch to GitHub repo
-- [ ] Creating new files & commit them
-- [ ] Create new branch
-- [ ] Merge conflicts
-- [ ] .gitignore
+- [X] Creating new files & commit them
+- [X] Create new branch
+- [X] Merge conflicts
+- [X] .gitignore
 
 ## Git commands
 ---
