@@ -2,10 +2,10 @@
 
 ### Todo List
 
-- [ ] Install git
-- [ ] Create new GitHub repository
-- [ ] Initialize git repository
-- [ ] Set remote branch to GitHub repo
+- [X] Install git
+- [X] Create new GitHub repository
+- [X] Initialize git repository
+- [X] Set remote branch to GitHub repo
 - [ ] Creating new files & commit them
 - [ ] Create new branch
 - [ ] Merge conflicts
